@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="description" content="Chris Everson is a web developer based in Seattle, WA who spends his days composing sexy code for sexy people.">
+        <meta name="author" content="Chris Everson">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="/images/icons/favicon.ico">
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-touch-icon-152x152.png">
+        <link rel="icon" type="image/png" href="/images/icons/favicon-196x196.png" sizes="196x196">
+        <link rel="icon" type="image/png" href="/images/icons/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="/images/icons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/images/icons/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="/images/icons/favicon-32x32.png" sizes="32x32">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="/images/icons/mstile-144x144.png">
+        <meta name="msapplication-square70x70logo" content="/images/icons/mstile-70x70.png">
+        <meta name="msapplication-square144x144logo" content="/images/icons/mstile-144x144.png">
+        <meta name="msapplication-square150x150logo" content="/images/icons/mstile-150x150.png">
+        <meta name="msapplication-square310x310logo" content="/images/icons/mstile-310x310.png">
+        <meta name="msapplication-wide310x150logo" content="/images/icons/mstile-310x150.png">
+        <link href="http://fonts.googleapis.com/css?family=Kameron" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/css/main.css">
+        <script src="/js/modernizr.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-28609729-1', 'chriseverson.net');
+            ga('require', 'linkid', 'linkid.js');
+            ga('send', 'pageview');
+        </script>
+    </head>
+    {% comment %}
+    TODO: Retina
+    TODO: Full cross-browser testing
+    TODO: Compress HTML
+    TODO: Compress JS
+    TODO: Add weather div/info
+    {% endcomment %}
+    <body>
+
+        <header>
+            <div>
+                <a href="#home" title="(h) Home">Chris Everson</a>
+                <span itemprop="locality" id="sea">Seattle, WA</span>
+                <button id="navTrigger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <nav>
+                    <a href="#about" title="(a) About"><span>About</span></a>
+                    <a href="#work" title= "(w) Work"><span>Work</span></a>
+                    <a href="#contact" title="(c) Contact"><span>Contact</span></a>
+                </nav>
+            </div>
+        </header>
+
+        {% include home.html %}
+        {% include about.html %}
+        {% include work.html %}
+        {% include contact.html %}
+
+        <footer>&copy; {{ site.time | date: '%Y' }} chris everson.</footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="/js/retina-1.1.0.min.js"></script>
+        <script src="/js/main.js"></script>
+
+        <!--
+        now the only girls i meet all look for hearts that they can fix
+        but mine is more like a kid that has gone missing
+        and there's a pretty girl in front of me that I know I won't let in
+        and I have you to thank for that, thanks for nothing
+        and I have you to thank for that, thanks for nothing
+        -->
+
+    </body>
+</html>

@@ -1,0 +1,358 @@
+@charset 'UTF-8';
+@import '_reset',
+        'bourbon/bourbon',
+        '_mixins';
+
+
+// ******************************************
+// Typography
+// ******************************************
+
+    @include font-face(SocialRegular, '/fonts/ss-social-regular');
+    $alt:'Kameron', 'Georgia', serif;
+    $social:'SocialRegular';
+
+// ******************************************
+// Sizes and colors
+// ******************************************
+
+    $mainWidth:820px;
+
+    $dark:#444;
+    $link:#0088da;
+
+// ******************************************
+// Global
+// ******************************************
+
+    body, html {
+        width:100%;
+        height:100%;
+        background:#f6f6f6;
+        font:16px/24px $helvetica;
+        color:#666;
+    }
+
+    a {
+        text-decoration:none;
+        color:$link;
+        @include transition(.3s);
+        &:hover { color:$dark; }
+        &.inv {
+            color:$dark;
+            &:hover { color:$link; }
+        }
+    }
+
+    .wrapper {
+        border-top:3px solid #444;
+        position:absolute;
+        width:100%;
+    }
+
+    .left { float:left; }
+    .right { float:right; }
+
+// ******************************************
+// Header
+// ******************************************
+
+    header {
+        position:fixed;
+        z-index:99;
+        border-top:3px solid #444;
+        width:100%;
+        &>div {
+            width:$mainWidth;
+            height:54px;
+            margin:0 auto;
+            font:12px/54px $helvetica;
+            text-transform:uppercase;
+            letter-spacing:1px;
+            background:#f6f6f6;
+            border-bottom:1px solid #bbb;
+            box-shadow:0 1px #fff;
+            @include clearfix;
+            &>a, &>span {
+                font-weight:600;
+                display:none;
+
+                @extend .inv;
+                @extend .left;
+                &#sea {
+                    display:inline-block;
+                    font-weight:300;
+                }
+            }
+
+            &>a {
+                margin-right:10px;
+                position:absolute;
+                display:block;
+                opacity:0;
+                float:left;
+                @include transition(opacity 0.4s ease-in-out);
+                &.active {
+                    opacity:1;
+                }
+            }
+
+            &.active {
+                &>a, &>span {
+                    display:inline-block;
+                }
+            }
+            #navTrigger { display:none; }
+            nav {
+                @extend .right;
+                a {
+                    display:inline-block;
+                    margin-left:26px;
+                    @include transition(all 0.4s ease-in-out);
+                    &.active {
+                        color:#444;
+                    }
+
+                }
+            }
+        }
+    }
+
+// ******************************************
+// Footer
+// ******************************************
+
+    footer {
+        width:$mainWidth;
+        margin:0 auto;
+        height:50px;
+        border-top:1px solid #bbb;
+        padding:0;
+        font:12px/50px $helvetica;
+        color:#999;
+        text-align:center;
+    }
+
+// ******************************************
+// Sections
+// ******************************************
+
+    section {
+        width:$mainWidth;
+        margin:0 auto 100px;
+        padding:80px 0 0;
+        @include calc(min-height, '100% - 80px', '100%');
+        h2 {
+            font:65px/60px $alt;
+            color:#444;
+            letter-spacing:1px;
+            text-align:center;
+        }
+        h4 {
+            font:18px/18px $lucida-grande;
+            color:#666;
+            text-align:center;
+            padding-bottom:32px;
+            border-bottom:1px solid #bbb;
+            box-shadow:0 1px #fff;
+            margin:0 0 46px;
+        }
+        .narrow {
+            width:716px;
+            margin:0 auto;
+            text-align:center;
+        }
+    }
+
+    // Home *********************************
+
+        #home {
+            padding:59px 0 0;
+            div {
+                display:none;
+                padding:36px 0 46px;
+                width:$mainWidth;
+                border-bottom:1px solid #bbb;
+                box-shadow:0 1px #fff;
+            }
+            h1 {
+                font:95px/90px $alt;
+                color:#444;
+                text-align:center;
+            }
+            h3 {
+                font:20px/20px $lucida-grande;
+                color:#666;
+                text-align:center;
+            }
+            #skills {
+                display:none;
+                font:16px/38px $helvetica;
+                margin:60px auto;
+                width:724px;
+                padding-right:11px;
+                color:#666;
+                @include clearfix;
+                li {
+                    float:left;
+                    border-bottom:1px solid #bbb;
+                    width:230px;
+                    margin:0 0 0 11px;
+                    &:first-child, &:nth-child(2), &:nth-child(3) {
+                        border-top:1px solid #bbb;
+                    }
+                }
+            }
+            #social {
+                display:none;
+                text-align:center;
+                margin:20px auto;
+                li {
+                    width:80px;
+                    display:inline-block;
+                    a {
+                        color:#bbb;
+                        @include transition(.5s);
+                        &:hover { color:$link; }
+                        i { // Necessary SymbolSet CSS
+                            font-family:$social;
+                            font-style:normal;
+                            font-weight:normal;
+                            text-decoration:none;
+                            text-rendering:optimizeLegibility;
+                            white-space:nowrap;
+                            /*-webkit-font-feature-settings: "liga"; Currently broken in Chrome >= v22. Falls back to text-rendering. Safari is unaffected. */
+                            -moz-font-feature-settings:"liga=1";
+                            -moz-font-feature-settings:"liga";
+                            -ms-font-feature-settings:"liga" 1;
+                            -o-font-feature-settings:"liga";
+                            font-feature-settings:"liga";
+                            -webkit-font-smoothing:antialiased;
+                            // Additional CSS
+                            font-size:30px;
+                        }
+                        span {
+                            display:none;
+                        }
+                    }
+                }
+            }
+        }
+
+    // About ********************************
+
+        #about {
+            img {
+                display:block;
+                background:#fff;
+                padding:12px;
+                @include transform(rotate(-8deg));
+                margin:-70px 0 0 18px;
+                box-shadow:4px 4px 10px 0px rgba(0,0,0,0.22);
+                @extend .left;
+            }
+            p {
+                width:362px;
+                margin-bottom:16px;
+                clear:right;
+                @extend .right;
+            }
+            ul {
+                clear:both;
+                padding:46px 0 0;
+                text-align:center;
+                font:22px/22px $alt;
+                color:#aaa;
+                li {
+                    margin:0 0 22px;
+                    span {
+                        color:$link;
+                    }
+                }
+            }
+        }
+
+    // Work *************************************
+
+        #work {
+            ul {
+                margin:60px 0 0;
+                font-size:0;
+                text-align:center;
+                li {
+                    width:205px;
+                    margin:0 0 46px;
+                    display:inline-block;
+                    vertical-align:middle;
+                    img {
+                        // -webkit-filter:grayscale(1);
+                        // -webkit-filter:grayscale(100%);
+                        // -moz-filter:grayscale(100%);
+                        // filter:gray;
+                        // filter:grayscale(100%);
+                        // filter:url(/images/desaturate.svg#greyscale);
+                        // @include transition(all .6s ease);
+                        // @include backface-visibility(hidden);
+                        &:hover {
+                            -webkit-filter:none;
+                            -moz-filter:none;
+                            filter:none;
+                        }
+                    }
+                }
+            }
+        }
+
+    // Contact **********************************
+
+        #contact {
+            margin:0 auto -50px;
+            .narrow {
+                div {
+                    margin:64px 0 0;
+                    display:inline-block;
+                    text-align:left;
+                }
+            }
+        }
+
+// ******************************************
+// Spinner
+// ******************************************
+
+    .spinner {
+        display:inline-block;
+        width:70px;
+        text-align:center;
+        letter-spacing:6px;
+        div {
+            width:8px;
+            height:8px;
+            background:#bbb;
+            border-radius:0;
+            display:inline-block;
+            -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+            animation: bouncedelay 1.4s infinite ease-in-out;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            &.b1 { @include animation-delay(-0.32s) }
+            &.b2 { @include animation-delay(-0.16s) }
+        }
+    }
+
+    @-webkit-keyframes bouncedelay {
+        0%, 80%, 100% { -webkit-transform: scale(0.0) }
+        40% { -webkit-transform: scale(1.0) }
+    }
+
+    @keyframes bouncedelay {
+        0%, 80%, 100% {
+            transform: scale(0.0);
+            -webkit-transform: scale(0.0);
+        } 40% {
+            transform: scale(1.0);
+            -webkit-transform: scale(1.0);
+        }
+    }
+
+@import '_mobile';
