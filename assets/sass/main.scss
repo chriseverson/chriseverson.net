@@ -1,0 +1,77 @@
+@import 'sass-tools/sass-tools';
+
+// Colors
+// **********************************************
+
+    $colorWhite: #f6f6f6;
+    $colorBlack: #555;
+
+// Fonts
+// **********************************************
+
+    $Inconsolata:'Inconsolata', 'Courier', sans-serif;
+
+// Layout
+// **********************************************
+
+
+    body {
+        background:$colorWhite;
+        color:$colorBlack;
+        font:15px/132% $Inconsolata;
+        text-align:center;
+    }
+
+    .wrapper {
+        min-height:100%;
+        margin-bottom:-100px;
+        overflow:hidden;
+        &:after {
+            content:'';
+            display:block;
+            height:100px;
+        }
+    }
+
+// Content
+// **********************************************
+
+    section {
+        width:624px;
+        text-align:center;
+        &.large {
+            font-size:24px;
+            font:400 24px/124% $Inconsolata;
+            margin:10% auto 64px;
+        }
+    }
+
+    h2, h1, h3 { display:inline; }
+    strong { font-weight:700; }
+
+// Footer
+// **********************************************
+
+    footer {
+        height:100px;
+        line-height:100px;
+        text-align:center;
+        font-size:32px;
+        a {
+            display:inline-block;
+            margin:0 12px;
+            i {
+                color:#bbb;
+                @include transition(color, .5s, ease);
+            }
+            &:hover {
+                i {
+                    color:$colorBlack;
+                    &.fa-linkedin { color:#4875B4; }
+                    &.fa-twitter { color:#4099ff; }
+                    &.fa-facebook { color:#3b5998; }
+                    &.fa-instagram { color:#675144; }
+                }
+            }
+        }
+    }

@@ -1,7 +1,0 @@
-@mixin calc($prop, $exp, $default) {
-    #{$prop}: $default;
-    #{$prop}: -webkit-calc(#{$exp});
-    #{$prop}: -moz-calc(#{$exp});
-    #{$prop}: -o-calc(#{$exp});
-    #{$prop}: calc(#{$exp});
-}

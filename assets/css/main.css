@@ -1,0 +1,217 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/**
+*   Device mixin to be used for media queries
+*
+*   Options are :
+*   mobile, mobile-portrait, monbile-landscape, tablet, tablet-portrait, tablet-landscape, desktop
+*
+*   @include device(mobile) { content }
+**/
+.showOnlyMobile {
+  display: none !important; }
+  @media only screen and (max-width: 480px) {
+    .showOnlyMobile {
+      display: block !important; } }
+
+@media only screen and (max-width: 480px) {
+  .hideOnlyMobile {
+    display: none; } }
+
+@media only screen and (max-width: 480px) {
+  .showMobile {
+    display: block !important; } }
+
+@media only screen and (max-width: 480px) {
+  .hideMobile {
+    display: none; } }
+
+.showOnlyTablet {
+  display: none !important; }
+  @media only screen and (min-width: 481px) and (max-width: 1028px) {
+    .showOnlyTablet {
+      display: block !important; } }
+
+@media only screen and (min-width: 481px) and (max-width: 1028px) {
+  .hideOnlyTablet {
+    display: none; } }
+
+@media only screen and (min-width: 481px) and (max-width: 1028px) {
+  .showTablet {
+    display: block; } }
+
+@media only screen and (min-width: 481px) and (max-width: 1028px) {
+  .hideTablet {
+    display: none; } }
+
+.showOnlyTabletPortrait {
+  display: none !important; }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    .showOnlyTabletPortrait {
+      display: block !important; } }
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .hideOnlyTabletPortrait {
+    display: none; } }
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .showTabletPortrait {
+    display: block !important; } }
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .hideTabletPortrait {
+    display: none; } }
+
+.showOnlyDesktop {
+  display: block; }
+  @media only screen and (max-width: 480px) {
+    .showOnlyDesktop {
+      display: none; } }
+  @media only screen and (min-width: 481px) and (max-width: 1028px) {
+    .showOnlyDesktop {
+      display: none; } }
+  @media only screen and (min-width: 1225px) {
+    .showOnlyDesktop {
+      display: block; } }
+
+.hideOnlyDesktop {
+  display: none; }
+  @media only screen and (max-width: 480px) {
+    .hideOnlyDesktop {
+      display: block; } }
+  @media only screen and (min-width: 481px) and (max-width: 1028px) {
+    .hideOnlyDesktop {
+      display: block; } }
+
+@media only screen and (min-width: 1225px) {
+  .showDesktop {
+    display: block; } }
+
+@media only screen and (min-width: 1225px) {
+  .hideDesktop {
+    display: none; } }
+
+.clearfix {
+  zoom: 1; }
+  .clearfix:before, .clearfix:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .clearfix:after {
+    clear: both; }
+
+.floatright {
+  float: right; }
+
+.floatleft {
+  float: left; }
+
+/**
+* To use, add the class preload to the body and remove
+* once the document is ready via JS
+*/
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important; }
+
+html, body {
+  height: 100%; }
+
+input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0; }
+
+input[type="submit"] {
+  cursor: pointer; }
+
+body {
+  background: #f6f6f6;
+  color: #555555;
+  font: 15px/132% "Inconsolata", "Courier", sans-serif;
+  text-align: center; }
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -100px;
+  overflow: hidden; }
+  .wrapper:after {
+    content: '';
+    display: block;
+    height: 100px; }
+
+section {
+  width: 624px;
+  text-align: center; }
+  section.large {
+    font-size: 24px;
+    font: 400 24px/124% "Inconsolata", "Courier", sans-serif;
+    margin: 10% auto 64px; }
+
+h2, h1, h3 {
+  display: inline; }
+
+strong {
+  font-weight: 700; }
+
+footer {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 32px; }
+  footer a {
+    display: inline-block;
+    margin: 0 12px; }
+    footer a i {
+      color: #bbb;
+      -webkit-transition: color 0.5s ease;
+      -moz-transition: color 0.5s ease;
+      -o-transition: color 0.5s ease;
+      transition: color 0.5s ease; }
+    footer a:hover i {
+      color: #555555; }
+      footer a:hover i.fa-linkedin {
+        color: #4875B4; }
+      footer a:hover i.fa-twitter {
+        color: #4099ff; }
+      footer a:hover i.fa-facebook {
+        color: #3b5998; }
+      footer a:hover i.fa-instagram {
+        color: #675144; }

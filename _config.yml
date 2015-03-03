@@ -1,4 +1,0 @@
-name: chriseverson.net
-exclude: [_sass, chriseverson.sublime-project, chriseverson.sublime-workspace, README.md, Gemfile.lock]
-markdown: redcarpet
-pygments: true
