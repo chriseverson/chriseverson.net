@@ -32,7 +32,7 @@
         <script>!function(e,n,a,t,i,s,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,s=n.createElement(a),c=n.getElementsByTagName(a)[0],s.async=1,s.src=t,c.parentNode.insertBefore(s,c)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-28609729-1","chriseverson.net"),ga("require","linkid","linkid.js"),ga("send","pageview")</script>
 
     </head>
-    <body>
+    <body class="preload">
         <div class="wrapper">
 
             <section class="large">
@@ -41,20 +41,22 @@
             </section>
 
             <p>
-                <strong>Currently:</strong> Flywheel Co.<br>
+                <strong>Currently:</strong> <a href="http://flywheel.co/">Flywheel Co.</a><br>
                 <strong>Previously:</strong> Primer Grey, MediaFire
             </p>
 
         </div>
 
         <footer>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-github"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-envelope-o"></i></a>
+            <a href="http://www.linkedin.com/in/chriseverson/"><i class="fa fa-linkedin"></i></a>
+            <a href="http://github.com/chriseverson/"><i class="fa fa-github"></i></a>
+            <a href="http://instagram.com/chriseverson"><i class="fa fa-instagram"></i></a>
+            <a href="http://twitter.com/chriseverson"><i class="fa fa-twitter"></i></a>
+            <a href="http://facebook.com/chriseverson.net"><i class="fa fa-facebook"></i></a>
+            <a href="mailto:hi@chriseverson.net"><i class="fa fa-envelope-o"></i></a>
         </footer>
+
+        <script src="/assets/js/main.js"></script>
 
     </body>
 </html>

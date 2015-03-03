@@ -171,7 +171,8 @@ body {
 .wrapper {
   min-height: 100%;
   margin-bottom: -100px;
-  overflow: hidden; }
+  overflow: hidden;
+  border-top: 3px solid #555555; }
   .wrapper:after {
     content: '';
     display: block;
@@ -184,6 +185,14 @@ section {
     font-size: 24px;
     font: 400 24px/124% "Inconsolata", "Courier", sans-serif;
     margin: 10% auto 64px; }
+    @media only screen and (max-width: 480px) {
+      section.large {
+        font-size: 18px;
+        margin-top: 25%;
+        margin-bottom: 80px; } }
+  @media (max-width: 640px) {
+    section {
+      width: 86%; } }
 
 h2, h1, h3 {
   display: inline; }
@@ -191,11 +200,44 @@ h2, h1, h3 {
 strong {
   font-weight: 700; }
 
+p {
+  -webkit-transition: opacity 0.7s ease;
+  -moz-transition: opacity 0.7s ease;
+  -o-transition: opacity 0.7s ease;
+  transition: opacity 0.7s ease;
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s; }
+  body.preload p {
+    opacity: 0; }
+
+a {
+  color: #555555;
+  text-decoration: none;
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  transition: color 0.5s ease; }
+  a:hover {
+    color: #1697d9; }
+
 footer {
   height: 100px;
   line-height: 100px;
   text-align: center;
-  font-size: 32px; }
+  font-size: 32px;
+  opacity: 1;
+  -webkit-transition: opacity 0.7s ease;
+  -moz-transition: opacity 0.7s ease;
+  -o-transition: opacity 0.7s ease;
+  transition: opacity 0.7s ease;
+  -webkit-transition-delay: 1s;
+  -moz-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  transition-delay: 1s; }
+  body.preload footer {
+    opacity: 0; }
   footer a {
     display: inline-block;
     margin: 0 12px; }
@@ -215,3 +257,8 @@ footer {
         color: #3b5998; }
       footer a:hover i.fa-instagram {
         color: #675144; }
+  @media (max-width: 640px) {
+    footer {
+      font-size: 26px; }
+      footer a {
+        margin: 0 6px; } }

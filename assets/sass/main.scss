@@ -5,6 +5,7 @@
 
     $colorWhite: #f6f6f6;
     $colorBlack: #555;
+    $colorBlue:  #1697D9;
 
 // Fonts
 // **********************************************
@@ -26,6 +27,7 @@
         min-height:100%;
         margin-bottom:-100px;
         overflow:hidden;
+        border-top:3px solid $colorBlack;
         &:after {
             content:'';
             display:block;
@@ -43,11 +45,30 @@
             font-size:24px;
             font:400 24px/124% $Inconsolata;
             margin:10% auto 64px;
+            @include mobile {
+                font-size:18px;
+                margin-top:25%;
+                margin-bottom:80px;
+            }
         }
+        @media(max-width:640px) { width:86%; }
     }
 
     h2, h1, h3 { display:inline; }
     strong { font-weight:700; }
+
+    p {
+        @include transition(opacity, .7s, ease);
+        @include transition-delay(.5s);
+        body.preload & { opacity:0; }
+    }
+
+    a {
+        color:$colorBlack;
+        text-decoration:none;
+        @include transition(color, .5s, ease);
+        &:hover { color:$colorBlue; }
+    }
 
 // Footer
 // **********************************************
@@ -57,6 +78,10 @@
         line-height:100px;
         text-align:center;
         font-size:32px;
+        opacity:1;
+        @include transition(opacity, .7s, ease);
+        @include transition-delay(1s);
+        body.preload & { opacity:0; }
         a {
             display:inline-block;
             margin:0 12px;
@@ -73,5 +98,9 @@
                     &.fa-instagram { color:#675144; }
                 }
             }
+        }
+        @media(max-width:640px) {
+            font-size:26px;
+            a { margin:0 6px; }
         }
     }

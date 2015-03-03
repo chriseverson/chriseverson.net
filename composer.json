@@ -6,11 +6,12 @@
         }
     ],
     "require": {
+        "mnsami/composer-custom-directory-installer": "1.0.*",
         "flywheel/sass-tools": "~1.0"
     },
     "extra": {
         "installer-paths": {
-            "assets/sass/{$name}": ["flywheel/sass-tools"]
+            "./assets/sass/sass-tools": ["flywheel/sass-tools"]
         }
     }
 }
