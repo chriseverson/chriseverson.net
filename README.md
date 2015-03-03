@@ -1,4 +1,4 @@
-chriseverson.net.new
+chriseverson.net
 ====================
 
-Le files for chriseverson.net. Powered by Jekyll.
+Le files for chriseverson.net.
