@@ -1,3 +1,2 @@
-/_site
-*.sublime-workspace
-*.sublime-project
+sass-tools
+vendor
