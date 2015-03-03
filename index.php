@@ -8,7 +8,7 @@
         <title>Chris Everson • Web Development • Seattle, WA</title>
         <meta name="description" content="Chris Everson is a web developer based in Seattle, WA who spends his days composing sexy code for sexy people.">
         <meta name="author" content="Chris Everson">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="shortcut icon" href="/assets/icons/favicon.ico">
         <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-touch-icon-57x57.png">
