@@ -28,6 +28,7 @@
         margin-bottom:-100px;
         overflow:hidden;
         border-top:3px solid $colorBlack;
+        @include bs;
         &:after {
             content:'';
             display:block;
