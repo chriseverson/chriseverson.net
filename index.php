@@ -37,7 +37,7 @@
 
             <section class="large">
                 <h2>Chris Everson</h2> is a <h1>web &amp; mobile software engineer</h1>
-                based in the beautiful <h3>Pacific Northwest</h3>.
+                based deep in the heart of <h3>Texas</h3>.
             </section>
 
             <p>
