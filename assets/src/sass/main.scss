@@ -1,0 +1,15 @@
+////
+/// Styles entrypoint
+///
+/// @since 9.0.0p
+////
+
+@import 'core/settings';
+
+@import 'flywheel-adapt/adapt';
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700|Noto+Serif+SC:200,300,400,500,600');
+
+@import 'components/layout';
+@import 'components/typography';
+
+@import 'content/home';

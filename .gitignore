@@ -1,3 +1,4 @@
-sass-tools
-vendor
-*.lock
+node_modules
+.sass-cache
+*.log
+assets/dist

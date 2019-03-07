@@ -1,0 +1,39 @@
+{
+  "name": "chriseverson.net",
+  "version": "9.0.0",
+  "main": "index.html",
+  "repository": "https://github.com/chriseverson/chriseverson.net.git",
+  "author": "chriseverson <chris@chriseverson.net>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_ENV=development gulp --gulpfile builder/gulpfile.js --cwd ./",
+    "deploy": "NODE_ENV=production gulp --gulpfile builder/gulpfile.js --cwd ./"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/register": "^7.0.0",
+    "@fortawesome/fontawesome-free": "^5.7.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-brands-svg-icons": "^5.7.2",
+    "@fortawesome/free-regular-svg-icons": "^5.7.2",
+    "autoprefixer": "^9.4.10",
+    "babel-loader": "^8.0.5",
+    "changed": "^0.0.2",
+    "del": "^4.0.0",
+    "flywheel-adapt": "^2.0.1",
+    "gulp": "^4.0.0",
+    "gulp-changed": "^3.2.0",
+    "gulp-dart-sass": "^0.9.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-livereload": "^4.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "livereload": "^0.7.0",
+    "postcss-cli": "^6.1.2",
+    "sass": "^1.17.2",
+    "vinyl-named": "^1.1.0",
+    "webpack-stream": "^5.2.1"
+  }
+}

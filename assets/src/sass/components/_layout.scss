@@ -1,0 +1,9 @@
+////
+/// Global layout styles
+////
+
+// Body element
+body {
+	background: $color-black linear-gradient(45deg, rgba(33,34,37,0.1) 0%, rgba(33,34,37,0.1) 65%, rgba(51,53,58,0.1) 100%);
+	min-height: 100vh;
+}

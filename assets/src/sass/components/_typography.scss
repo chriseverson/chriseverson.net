@@ -1,0 +1,32 @@
+////
+/// Typography styles
+///
+/// @since 9.0.0
+////
+
+body {
+	color: $color-white;
+	font: 200 3vh/1.35 $font-family-primary;
+
+}
+
+a {
+	color: $color-white;
+	text-decoration: none;
+	transition: all .2s linear;
+}
+
+p {
+	color: rgba($color-white, .5);
+	font: 300 .45em/1 $font-family-secondary;
+	margin-bottom: 2.5vh;
+	letter-spacing: 0.04em;
+
+	@include d(mobile) {
+		font-size: .55em;
+	}
+}
+
+strong {
+	font-weight: 400;
+}

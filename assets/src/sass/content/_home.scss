@@ -1,0 +1,71 @@
+////
+/// Homepage styles
+///
+/// @since 9.0.0
+////
+
+main, footer {
+	position: absolute;
+	width: 80%;
+	max-width: 80vh;
+	transform: translateX(-50%);
+	left: 50%;
+}
+
+main {
+	top: 10%;
+	padding-bottom: 15vh;
+
+	@include d(mobile) {
+		top: 10vw;
+	}
+
+	h1, h2, h3 {
+		display: inline;
+	}
+
+	div {
+		font-size: 5vh;
+		line-height: 1.5;
+		margin-bottom: 10vh;
+
+		@include d(mobile) {
+			font-size: 4vh;
+
+			br {
+				display: none;
+			}
+		}
+	}
+
+	strong {
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+	}
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: $color-white;
+		}
+	}
+}
+
+footer {
+	bottom: 0;
+	font-size: 3vh;
+	line-height: 10vh;
+	height: 10vh;
+	border-top: 1px solid rgba($color-white, .1);
+
+	a {
+		color: rgba($color-white, .1);
+		display: inline-block;
+		margin: 0 3vh 0 0;
+
+		&:hover {
+			color: $color-white;
+		}
+	}
+}
