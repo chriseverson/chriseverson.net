@@ -7,6 +7,7 @@
 body {
 	color: $color-white;
 	font: 200 3vh/1.35 $font-family-primary;
+	letter-spacing: .7px;
 
 }
 
@@ -18,9 +19,9 @@ a {
 
 p {
 	color: rgba($color-white, .5);
-	font: 300 .45em/1 $font-family-secondary;
-	margin-bottom: 2.5vh;
-	letter-spacing: 0.04em;
+	font: 300 .5em/1 $font-family-secondary;
+	margin-bottom: 2vh;
+	letter-spacing: 0.08em;
 
 	@include d(mobile) {
 		font-size: .55em;
@@ -28,5 +29,5 @@ p {
 }
 
 strong {
-	font-weight: 400;
+	font-weight: 300;
 }
