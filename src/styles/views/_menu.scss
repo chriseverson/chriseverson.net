@@ -18,6 +18,10 @@
   left: 0;
   background: $color-white;
 
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+
   &:first-child {
     border-top: 1px solid $color-lighter;
     border-top-left-radius: .25em;
@@ -63,7 +67,7 @@
 
   svg {
     width: .95em;
-    margin-right: .5em;
+    margin-left: 1em;
     opacity: .666;
     transition: opacity .125s ease-in-out;
 
