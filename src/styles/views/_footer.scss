@@ -1,0 +1,41 @@
+.social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.75em;
+  opacity: 1;
+  transition: opacity .333s ease-in-out;
+  transition-delay: .125s * 4;
+
+  body.preload & {
+    opacity: 0;
+  }
+
+  a {
+    flex-basis: .875em;
+    display: block;
+    margin: 0 1em;
+    color: #959da5;
+    padding: .25em;
+    transition: color .125s linear;
+
+    &.social--github:hover {
+      color: #24292e;
+    }
+
+    &.social--linkedin:hover {
+      color: #0077b5;
+    }
+
+    &.social--instagram:hover {
+      color: #5851db;
+    }
+  }
+
+  svg {
+    width: .875em;
+
+    path {
+      fill: currentColor;
+    }
+  }
+}

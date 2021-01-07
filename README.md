@@ -1,4 +1,1 @@
-chriseverson.net
-====================
-
-Le files for chriseverson.net.
+This repository contains the files that power [chriseverson.net](https://chriseverson.net). 

@@ -1,0 +1,102 @@
+.menu {
+  display: block;
+  margin-top: 3em;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid $color-lighter;
+  border-top: 0;
+  overflow: hidden;
+  padding: .5em 1em;
+  color: $color-medium;
+  left: 0;
+  background: $color-white;
+
+  &:first-child {
+    border-top: 1px solid $color-lighter;
+    border-top-left-radius: .25em;
+    border-top-right-radius: .25em;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: .25em;
+    border-bottom-right-radius: .25em;
+  }
+
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      transition: color .125s ease-in-out, background .125s ease-in-out, transform .25s * $i ease-in-out;
+      z-index: 10 - $i;
+
+      body.preload & {
+        transform: translateY(-101% * $i);
+      }
+    }
+  }
+
+  &:before {
+    content: '';
+    top: 0;
+    left: -.2em;
+    position: absolute;
+    transition: left .125s ease-in-out;
+    @include size(.2em, 100%);
+  }
+
+  &:nth-child(3n+1):before {
+    background: $color-cyan;
+  }
+
+  &:nth-child(3n+2):before {
+    background: $color-magenta;
+  }
+
+  &:nth-child(3n+3):before {
+    background: $color-yellow;
+  }
+
+  svg {
+    width: .95em;
+    margin-right: .5em;
+    opacity: .666;
+    transition: opacity .125s ease-in-out;
+
+    path {
+      fill: currentColor;
+    }
+  }
+
+  span {
+    font-size: .75em;
+  }
+
+  &:hover {
+    color: $color-dark;
+
+    &:before {
+      left: 0;
+    }
+
+    svg {
+      opacity: 1;
+    }
+
+    &:nth-child(3n+1) {
+      background: rgba($color-cyan, .125);
+    }
+
+    &:nth-child(3n+2) {
+      background: rgba($color-magenta, .1);
+    }
+
+    &:nth-child(3n+3) {
+      background: rgba($color-yellow, .125);
+    }
+  }
+}
