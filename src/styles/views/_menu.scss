@@ -50,19 +50,8 @@
     left: -.2em;
     position: absolute;
     transition: left .125s ease-in-out;
-    @include size(.2em, 100%);
-  }
-
-  &:nth-child(3n+1):before {
     background: $color-cyan;
-  }
-
-  &:nth-child(3n+2):before {
-    background: $color-magenta;
-  }
-
-  &:nth-child(3n+3):before {
-    background: $color-yellow;
+    @include size(.2em, 100%);
   }
 
   svg {
@@ -82,6 +71,7 @@
 
   &:hover {
     color: $color-dark;
+    background: rgba($color-cyan, .125);
 
     &:before {
       left: 0;
@@ -89,18 +79,6 @@
 
     svg {
       opacity: 1;
-    }
-
-    &:nth-child(3n+1) {
-      background: rgba($color-cyan, .125);
-    }
-
-    &:nth-child(3n+2) {
-      background: rgba($color-magenta, .1);
-    }
-
-    &:nth-child(3n+3) {
-      background: rgba($color-yellow, .125);
     }
   }
 }
