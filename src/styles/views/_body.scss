@@ -9,7 +9,7 @@
   img {
     $size: 3.5em;
 
-    border-radius: $size/2;
+    border-radius: $size * 0.5;
     margin-bottom: .75em;
     @include size($size);
   }
